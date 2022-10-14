@@ -32,7 +32,18 @@ const makeGallery = (images) => {
 };
 
 const galleryEl = makeGallery(images);
+console.log(galleryEl);
 
 const wholeGallery = document.querySelector(".gallery");
 wholeGallery.append(...galleryEl);
 console.log(wholeGallery);
+
+const makeGalleryItemEl = ({ url, alt }) => {
+  return `<li class = "item"> <img class = "img" width="400" 
+  src = "${url}" alt = "${alt}"></li>`;
+};
+const makeGalleryNew = images.map(makeGalleryItemEl).join("");
+
+const wholeGalleryNew = document.querySelector(".gallery");
+wholeGalleryNew.insertAdjacentHTML("beforeend", makeGalleryNew);
+console.log(wholeGalleryNew);
