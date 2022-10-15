@@ -19,7 +19,6 @@ const makeGallery = (images) => {
     makeListEl.classList.add("item");
     const makeImageEl = document.createElement("img");
     makeImageEl.classList.add("img");
-    makeImageEl.classList.add("img");
     makeImageEl.width = "400";
     makeImageEl.src = image.url;
     makeImageEl.alt = image.alt;
