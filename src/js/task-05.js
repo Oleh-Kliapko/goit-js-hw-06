@@ -2,7 +2,7 @@ const refs = {
   inputName: document.querySelector("#name-input"),
   outputName: document.querySelector("#name-output"),
 };
-
+console.log(refs.inputName);
 refs.inputName.addEventListener("input", onOutputName);
 const outputDefault = refs.outputName.textContent;
 
