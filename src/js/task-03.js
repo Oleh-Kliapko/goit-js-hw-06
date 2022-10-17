@@ -24,18 +24,15 @@ const makeGallery = (images) => {
     makeImageEl.alt = image.alt;
 
     makeListEl.append(makeImageEl);
-    console.log(makeListEl);
 
     return makeListEl;
   });
 };
 
 const galleryEl = makeGallery(images);
-console.log(galleryEl);
 
 const wholeGallery = document.querySelector(".gallery");
 wholeGallery.append(...galleryEl);
-console.log(wholeGallery);
 
 const makeGalleryItemEl = ({ url, alt }) => {
   return `<li class = "item"> <img class = "img" width="400" 
@@ -45,4 +42,3 @@ const makeGalleryNew = images.map(makeGalleryItemEl).join("");
 
 const wholeGalleryNew = document.querySelector(".gallery");
 wholeGalleryNew.insertAdjacentHTML("beforeend", makeGalleryNew);
-console.log(wholeGalleryNew);

@@ -10,11 +10,9 @@ refs.decrementBtn.addEventListener("click", onDecrementBtn);
 refs.incrementBtn.addEventListener("click", onIncrementBtn);
 
 function onDecrementBtn(event) {
-  console.log(refs.value.textContent);
   refs.value.textContent = changeValue -= 1;
 }
 
 function onIncrementBtn(event) {
-  console.log(refs.value.textContent);
   refs.value.textContent = changeValue += 1;
 }
