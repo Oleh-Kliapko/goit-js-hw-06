@@ -44,3 +44,9 @@ button {
   max-width: 100%;
   height: auto;
 }
+
+#boxes {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
