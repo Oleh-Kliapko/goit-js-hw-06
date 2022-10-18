@@ -13,11 +13,23 @@ const images = [
   },
 ];
 
-const makeGalleryItemEl = ({ url, alt }) => {
-  return `<li class = "item"> <img class = "img" width="400" 
-  src = "${url}" alt = "${alt}"></li>`;
-};
-const makeGalleryNew = images.map(makeGalleryItemEl).join("");
+const makeGallery = (images) => {
+  return images.map((image) => {
+    const makeListEl = document.createElement("li");
+    makeListEl.classList.add("item");
+    const makeImageEl = document.createElement("img");
+    makeImageEl.classList.add("img");
+    makeImageEl.width = "400";
+    makeImageEl.src = image.url;
+    makeImageEl.alt = image.alt;
 
-const wholeGalleryNew = document.querySelector(".gallery");
-wholeGalleryNew.insertAdjacentHTML("beforeend", makeGalleryNew);
+    makeListEl.append(makeImageEl);
+
+    return makeListEl;
+  });
+};
+
+const galleryEl = makeGallery(images);
+
+const wholeGallery = document.querySelector(".gallery");
+wholeGallery.append(...galleryEl);
